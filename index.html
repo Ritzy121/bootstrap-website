@@ -13,6 +13,8 @@
     <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"/>
+
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css' rel='stylesheet' />
     
     <link rel="stylesheet" href="/style.css"> 
     
@@ -49,6 +51,9 @@
                     </li>
                     <li class="nav-item">
                         <a href="#instructors" class="nav-link">Meet the Instructors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact Us</a>
                     </li>
                 </ul>
             </div>
@@ -346,9 +351,55 @@
         </div>
     </section>
 
+    <!-- Contact & Map -->
+    <section class="p-5" id="contact">
+        <div class="container">
+            <div class="row g-4">
+            <div class="col-md">
+                <h2 class="text-center mb-4">Contact Info</h2>
+                <ul class="list-group list-group-flush lead">
+                <li class="list-group-item">
+                    <span class="fw-bold">Main Location:</span> 50 Main st Boston MA
+                </li>
+                <li class="list-group-item">
+                    <span class="fw-bold">Enrollment Phone:</span> (555) 555-5555
+                </li>
+                <li class="list-group-item">
+                    <span class="fw-bold">Student Phone:</span> (333) 333-3333
+                </li>
+                <li class="list-group-item">
+                    <span class="fw-bold">Enrollment Email:</span> (555)
+                    enroll@frontendbc.test
+                </li>
+                <li class="list-group-item">
+                    <span class="fw-bold">Student Email:</span>
+                    student@frontendbc.test
+                </li>
+                </ul>
+            </div>
+            <div class="col-md">
+                <div id="map"></div>
+            </div>
+            </div>
+        </div>
+        </section>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
     crossorigin="anonymous"></script>
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js'></script>
+
+    <script>
+      mapboxgl.accessToken =
+        'pk.eyJ1Ijoicml0ejEyMyIsImEiOiJjbDFubTdhbjMwMnIzM2NvOGh4Nm1kNjg3In0.UrbfII9ctbOktQyyywYKDA'
+      var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [-0.134781, 51.328386],
+        zoom:16,
+      })
+    </script>
 
 </body>
 </html>
